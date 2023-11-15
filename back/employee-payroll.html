@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="./">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>TruHR</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Vendors styles-->
+    <link rel="stylesheet" href="vendors/simplebar/css/simplebar.css">
+    <link rel="stylesheet" href="css/vendors/simplebar.css">
+    <!-- Main styles for this application-->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- We use those styles to show code examples, you should remove them in your application.-->
+    <link href="css/examples.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
+    <!-- Google Charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- Charts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            // Set Data
+            const data = google.visualization.arrayToDataTable([
+                ['Contry', 'Mhl'],
+                ['Work From Home', 10],
+                ['Work From Office', 6],
+                ['Work From Field', 3]
+
+            ]);
+
+            // Set Options
+            const options = {
+                legend: 'none',
+                title: ''
+            };
+
+            // Draw
+            const chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+
+        }
+    </script>
+
+</head>
+
+
+
+<body>
+    <div class="sidebar sidebar-light sidebar-fixed" id="sidebar">
+        <div class="sidebar-brand d-none d-md-flex">
+            <!-- <h2 class="t-logo"> <strong>T</strong>ru<strong>HR</strong></h2> -->
+            <div class="t-logo">
+                <a href="index.html">
+                    <img src="assets/img/logo.svg" alt="TruHR Logo" >
+                </a>
+            </div>
+            
+            <!--button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button-->
+        </div>
+        <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
+            <li class="nav-item"><a class="nav-link" href="dashboard.html">
+                    <svg viewBox="0 0 512 512" class="nav-item cus-nav-item">
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M425.706,142.294A240,240,0,0,0,16,312v88H160V368H48V312c0-114.691,93.309-208,208-208s208,93.309,208,208v56H352v32H496V312A238.432,238.432,0,0,0,425.706,142.294Z"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="80" y="264" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="240" y="128" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="136" y="168" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="400" y="264" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M297.222,335.1l69.2-144.173-28.85-13.848L268.389,321.214A64.141,64.141,0,1,0,297.222,335.1ZM256,416a32,32,0,1,1,32-32A32.036,32.036,0,0,1,256,416Z"
+                            class="ci-primary" />
+                    </svg>
+                    Dashboard</a></li>
+            <li class="nav-title">Leaves</li>
+            <li class="nav-item mt-auto"><a class="nav-link" href="Overview.html">
+
+                    <svg viewBox="0 0 512 512" class="nav-item cus-nav-item">
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M334.627,16H48V496H472V153.373ZM440,166.627V168H320V48h1.373ZM80,464V48H288V200H440V464Z"
+                            class="ci-primary" />
+                        <rect width="224" height="32" x="136" y="296" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="224" height="32" x="136" y="376" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                    </svg>
+                    Overview</a>
+            </li>
+            <li class="nav-item mt-auto"><a class="nav-link" href="leave_applications.html">
+
+                    <svg viewBox="0 0 512 512" class="nav-item cus-nav-item">
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M334.627,16H48V496H472V153.373ZM440,166.627V168H320V48h1.373ZM80,464V48H288V200H440V464Z"
+                            class="ci-primary" />
+                        <rect width="224" height="32" x="136" y="296" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="224" height="32" x="136" y="376" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                    </svg>
+                    Leave Applications</a>
+            </li>
+            <li class="nav-item mt-auto"><a class="nav-link" href="Holidays.html">
+
+                    <svg viewBox="0 0 512 512" class="nav-item cus-nav-item">
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M334.627,16H48V496H472V153.373ZM440,166.627V168H320V48h1.373ZM80,464V48H288V200H440V464Z"
+                            class="ci-primary" />
+                        <rect width="224" height="32" x="136" y="296" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="224" height="32" x="136" y="376" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                    </svg>
+                    Holidays</a>
+            </li>
+            <li class="nav-item mt-auto"><a class="nav-link" href="#" target="_blank">
+
+                    <svg viewBox="0 0 512 512" class="nav-item cus-nav-item">
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M334.627,16H48V496H472V153.373ZM440,166.627V168H320V48h1.373ZM80,464V48H288V200H440V464Z"
+                            class="ci-primary" />
+                        <rect width="224" height="32" x="136" y="296" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="224" height="32" x="136" y="376" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                    </svg>
+                    Settings</a>
+            </li>
+            <li class="nav-divider"></li>
+            <li class="nav-divider"></li>
+            <li class="nav-divider"></li>
+
+
+        </ul>
+    </div>
+    <div class="sidebar sidebar-light sidebar-lg sidebar-end sidebar-overlaid hide" id="aside">
+        <div class="sidebar-header bg-transparent p-0">
+            <ul class="nav nav-underline nav-underline-primary" role="tablist">
+                <li class="nav-item"><a class="nav-link active" data-coreui-toggle="tab" href="#timeline" role="tab">
+                        <svg class="icon">
+                            <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-list"></use>
+                        </svg></a></li>
+                <li class="nav-item"><a class="nav-link" data-coreui-toggle="tab" href="#messages" role="tab">
+                        <svg class="icon">
+                            <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-speech"></use>
+                        </svg></a></li>
+                <li class="nav-item"><a class="nav-link" data-coreui-toggle="tab" href="#settings" role="tab">
+                        <svg class="icon">
+                            <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
+                        </svg></a></li>
+            </ul>
+            <button class="sidebar-close" type="button" data-coreui-close="sidebar">
+                <svg class="icon">
+                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-x"></use>
+                </svg>
+            </button>
+        </div>
+        <!-- Tab panes-->
+        <div class="tab-content">
+            <div class="tab-pane active" id="timeline" role="tabpanel">
+                <div class="list-group list-group-flush">
+                    <div
+                        class="list-group-item border-start-4 border-start-secondary bg-light text-center fw-bold text-medium-emphasis text-uppercase small dark:bg-white dark:bg-opacity-10 dark:text-medium-emphasis">
+                        Today</div>
+                    <div class="list-group-item border-start-4 border-start-warning list-group-item-divider">
+                        <div class="avatar avatar-lg float-end"><img class="avatar-img" src="assets/img/avatars/7.jpg"
+                                alt="user@email.com"></div>
+                        <div>Meeting with <strong>Lucas</strong></div><small class="text-medium-emphasis me-3">
+                            <svg class="icon">
+                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-calendar"></use>
+                            </svg> 1 - 3pm</small><small class="text-medium-emphasis">
+                            <svg class="icon">
+                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-location-pin"></use>
+                            </svg> Palo Alto, CA</small>
+                    </div>
+                    <div class="list-group-item border-start-4 border-start-info">
+                        <div class="avatar avatar-lg float-end"><img class="avatar-img" src="assets/img/avatars/4.jpg"
+                                alt="user@email.com"></div>
+                        <div>Skype with <strong>Megan</strong></div><small class="text-medium-emphasis me-3">
+                            <svg class="icon">
+                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-calendar"></use>
+                            </svg> 4 - 5pm</small><small class="text-medium-emphasis">
+                            <svg class="icon">
+                                <use xlink:href="vendors/@coreui/icons/svg/brand.svg#cib-skype"></use>
+                            </svg> On-line</small>
+                    </div>
+                    <div
+                        class="list-group-item border-start-4 border-start-secondary bg-light text-center fw-bold text-medium-emphasis text-uppercase small dark:bg-white dark:bg-opacity-10 dark:text-medium-emphasis">
+                        Tomorrow</div>
+                    <div class="list-group-item border-start-4 border-start-danger list-group-item-divider">
+                        <div>New UI Project - <strong>deadline</strong></div><small class="text-medium-emphasis me-3">
+                            <svg class="icon">
+                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-calendar"></use>
+                            </svg> 10 - 11pm</small><small class="text-medium-emphasis">
+                            <svg class="icon">
+                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-home"></use>
+                            </svg> creativeLabs HQ</small>
+                        <div class="avatars-stack mt-2">
+                            <div class="avatar avatar-xs"><img class="avatar-img" src="assets/img/avatars/2.jpg"
+                                    alt="user@email.com">
+                            </div>
+                            <div class="avatar avatar-xs"><img class="avatar-img" src="assets/img/avatars/3.jpg"
+                                    alt="user@email.com">
+                            </div>
+                            <div class="avatar avatar-xs"><img class="avatar-img" src="assets/img/avatars/4.jpg"
+                                    alt="user@email.com">
+                            </div>
+                            <div class="avatar avatar-xs"><img class="avatar-img" src="assets/img/avatars/5.jpg"
+                                    alt="user@email.com">
+                            </div>
+                            <div class="avatar avatar-xs"><img class="avatar-img" src="assets/img/avatars/6.jpg"
+                                    alt="user@email.com">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-group-item border-start-4 border-start-success list-group-item-divider">
+                        <div><strong>#10 Startups.Garden</strong> Meetup</div><small class="text-medium-emphasis me-3">
+                            <svg class="icon">
+                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-calendar"></use>
+                            </svg> 1 - 3pm</small><small class="text-medium-emphasis">
+                            <svg class="icon">
+                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-location-pin"></use>
+                            </svg> Palo Alto, CA</small>
+                    </div>
+                    <div class="list-group-item border-start-4 border-start-primary list-group-item-divider">
+                        <div><strong>Team meeting</strong></div><small class="text-medium-emphasis me-3">
+                            <svg class="icon">
+                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-calendar"></use>
+                            </svg> 4 - 6pm</small><small class="text-medium-emphasis">
+                            <svg class="icon">
+                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-home"></use>
+                            </svg> creativeLabs HQ</small>
+                        <div class="avatars-stack mt-2">
+                            <div class="avatar avatar-xs"><img class="avatar-img" src="assets/img/avatars/2.jpg"
+                                    alt="user@email.com">
+                            </div>
+                            <div class="avatar avatar-xs"><img class="avatar-img" src="assets/img/avatars/3.jpg"
+                                    alt="user@email.com">
+                            </div>
+                            <div class="avatar avatar-xs"><img class="avatar-img" src="assets/img/avatars/4.jpg"
+                                    alt="user@email.com">
+                            </div>
+                            <div class="avatar avatar-xs"><img class="avatar-img" src="assets/img/avatars/5.jpg"
+                                    alt="user@email.com">
+                            </div>
+                            <div class="avatar avatar-xs"><img class="avatar-img" src="assets/img/avatars/6.jpg"
+                                    alt="user@email.com">
+                            </div>
+                            <div class="avatar avatar-xs"><img class="avatar-img" src="assets/img/avatars/7.jpg"
+                                    alt="user@email.com">
+                            </div>
+                            <div class="avatar avatar-xs"><img class="avatar-img" src="assets/img/avatars/8.jpg"
+                                    alt="user@email.com">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane p-3" id="messages" role="tabpanel">
+                <div class="message">
+                    <div class="py-3 pb-5 me-3 float-start">
+                        <div class="avatar"><img class="avatar-img" src="assets/img/avatars/7.jpg"
+                                alt="user@email.com"><span class="avatar-status bg-success"></span></div>
+                    </div>
+                    <div><small class="text-medium-emphasis">Lukasz Holeczek</small><small
+                            class="text-medium-emphasis float-end mt-1">1:52 PM</small></div>
+                    <div class="text-truncate fw-bold">Lorem ipsum dolor sit amet</div><small
+                        class="text-medium-emphasis">Lorem
+                        ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+                </div>
+                <hr>
+                <div class="message">
+                    <div class="py-3 pb-5 me-3 float-start">
+                        <div class="avatar"><img class="avatar-img" src="assets/img/avatars/7.jpg"
+                                alt="user@email.com"><span class="avatar-status bg-success"></span></div>
+                    </div>
+                    <div><small class="text-medium-emphasis">Lukasz Holeczek</small><small
+                            class="text-medium-emphasis float-end mt-1">1:52 PM</small></div>
+                    <div class="text-truncate fw-bold">Lorem ipsum dolor sit amet</div><small
+                        class="text-medium-emphasis">Lorem
+                        ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+                </div>
+                <hr>
+                <div class="message">
+                    <div class="py-3 pb-5 me-3 float-start">
+                        <div class="avatar"><img class="avatar-img" src="assets/img/avatars/7.jpg"
+                                alt="user@email.com"><span class="avatar-status bg-success"></span></div>
+                    </div>
+                    <div><small class="text-medium-emphasis">Lukasz Holeczek</small><small
+                            class="text-medium-emphasis float-end mt-1">1:52 PM</small></div>
+                    <div class="text-truncate fw-bold">Lorem ipsum dolor sit amet</div><small
+                        class="text-medium-emphasis">Lorem
+                        ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+                </div>
+                <hr>
+                <div class="message">
+                    <div class="py-3 pb-5 me-3 float-start">
+                        <div class="avatar"><img class="avatar-img" src="assets/img/avatars/7.jpg"
+                                alt="user@email.com"><span class="avatar-status bg-success"></span></div>
+                    </div>
+                    <div><small class="text-medium-emphasis">Lukasz Holeczek</small><small
+                            class="text-medium-emphasis float-end mt-1">1:52 PM</small></div>
+                    <div class="text-truncate fw-bold">Lorem ipsum dolor sit amet</div><small
+                        class="text-medium-emphasis">Lorem
+                        ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+                </div>
+                <hr>
+                <div class="message">
+                    <div class="py-3 pb-5 me-3 float-start">
+                        <div class="avatar"><img class="avatar-img" src="assets/img/avatars/7.jpg"
+                                alt="user@email.com"><span class="avatar-status bg-success"></span></div>
+                    </div>
+                    <div><small class="text-medium-emphasis">Lukasz Holeczek</small><small
+                            class="text-medium-emphasis float-end mt-1">1:52 PM</small></div>
+                    <div class="text-truncate fw-bold">Lorem ipsum dolor sit amet</div><small
+                        class="text-medium-emphasis">Lorem
+                        ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+                </div>
+            </div>
+            <div class="tab-pane p-3" id="settings" role="tabpanel">
+                <h6>Settings</h6>
+                <div class="aside-options">
+                    <div class="clearfix mt-4">
+                        <div class="form-check form-switch form-switch-lg">
+                            <input class="form-check-input me-0" id="flexSwitchCheckDefaultLg" type="checkbox"
+                                checked="">
+                            <label class="form-check-label fw-semibold small" for="flexSwitchCheckDefaultLg">Option
+                                1</label>
+                        </div>
+                    </div>
+                    <div><small class="text-medium-emphasis">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua.</small></div>
+                </div>
+                <div class="aside-options">
+                    <div class="clearfix mt-3">
+                        <div class="form-check form-switch form-switch-lg">
+                            <input class="form-check-input me-0" id="flexSwitchCheckDefaultLg" type="checkbox">
+                            <label class="form-check-label fw-semibold small" for="flexSwitchCheckDefaultLg">Option
+                                2</label>
+                        </div>
+                    </div>
+                    <div><small class="text-medium-emphasis">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua.</small></div>
+                </div>
+                <div class="aside-options">
+                    <div class="clearfix mt-3">
+                        <div class="form-check form-switch form-switch-lg">
+                            <input class="form-check-input me-0" id="flexSwitchCheckDefaultLg" type="checkbox">
+                            <label class="form-check-label fw-semibold small" for="flexSwitchCheckDefaultLg">Option
+                                3</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="aside-options">
+                    <div class="clearfix mt-3">
+                        <div class="form-check form-switch form-switch-lg">
+                            <input class="form-check-input me-0" id="flexSwitchCheckDefaultLg" type="checkbox"
+                                checked="">
+                            <label class="form-check-label fw-semibold small" for="flexSwitchCheckDefaultLg">Option
+                                4</label>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <h6>System Utilization</h6>
+                <div class="text-uppercase mb-1 mt-4"><small><b>CPU Usage</b></small></div>
+                <div class="progress progress-thin">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                </div><small class="text-medium-emphasis">348 Processes. 1/4 Cores.</small>
+                <div class="text-uppercase mb-1 mt-2"><small><b>Memory Usage</b></small></div>
+                <div class="progress progress-thin">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                </div><small class="text-medium-emphasis">11444GB/16384MB</small>
+                <div class="text-uppercase mb-1 mt-2"><small><b>SSD 1 Usage</b></small></div>
+                <div class="progress progress-thin">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                </div><small class="text-medium-emphasis">243GB/256GB</small>
+                <div class="text-uppercase mb-1 mt-2"><small><b>SSD 2 Usage</b></small></div>
+                <div class="progress progress-thin">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 10%" aria-valuenow="10"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                </div><small class="text-medium-emphasis">25GB/256GB</small>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".header-toggler").click(function () {
+                $(".desktop_logo").toggleClass("show_logo");
+            });
+        });
+    </script>
+    <div class="wrapper d-flex flex-column min-vh-100 bg-light dark:bg-transparent">
+        <header class="header header-light t-bg header-sticky mb-4">
+            <div class="container-fluid">
+                <a class="header-brand d-md-none desktop_logo text-white" style="display:none;" href="/">
+                    <!-- <h2 class="t-logo"><strong>T</strong>tu<strong>HR</strong></h2> -->
+                    <img src="assets/img/logo.svg" alt="">
+                </a>
+                <button class="header-toggler px-md-0 me-md-3 " type="button"
+                    onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
+
+
+                    <svg viewBox="0 0 512 512" class="icon icon-lg">
+                        <rect width="352" height="32" x="80" y="96" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="352" height="32" x="80" y="240" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="352" height="32" x="80" y="384" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                    </svg>
+
+                </button>
+                <!-- Mobile Logo -->
+                <img src="assets/img/logo.svg" alt="" class="mt-logo">
+                <form class="d-none d-md-flex" role="search">
+                    <div class="input-group"><span class="input-group-text bg-light border-0 px-1" id="search-addon">
+                            <svg class="icon icon-lg my-1 mx-2 text-disabled">
+                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-search"></use>
+                            </svg></span>
+                        <input class="form-control bg-light border-0" type="text" placeholder="Search..."
+                            aria-label="Search" aria-describedby="search-addon">
+                    </div>
+                </form>
+                <ul class="header-nav d-none d-sm-flex ms-auto me-3">
+                    <li class="nav-item dropdown d-md-down-none"><a class="nav-link" data-coreui-toggle="dropdown"
+                            href="#" role="button" aria-haspopup="true" aria-expanded="false"><span
+                                class="d-inline-block my-1 mx-2 position-relative">
+
+                                <svg viewBox="0 0 512 512" class="icon icon-lg">
+                                    <path fill="var(--ci-primary-color, currentColor)"
+                                        d="M450.27,348.569,406.6,267.945V184c0-83.813-68.187-152-152-152s-152,68.187-152,152v83.945L58.928,348.568A24,24,0,0,0,80.031,384h86.935c-.238,2.636-.367,5.3-.367,8a88,88,0,0,0,176,0c0-2.7-.129-5.364-.367-8h86.935a24,24,0,0,0,21.1-35.431ZM310.6,392a56,56,0,1,1-111.419-8H310.018A56.14,56.14,0,0,1,310.6,392ZM93.462,352,134.6,276.055V184a120,120,0,0,1,240,0v92.055L415.736,352Z"
+                                        class="ci-primary" />
+                                </svg>
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle p-1 bg-danger rounded-circle"><span
+                                        class="visually-hidden">New alerts</span></span></span></a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-lg pt-0">
+                            <div class="dropdown-header bg-light dark:bg-white dark:bg-opacity-10"><strong>You have 5
+                                    notifications</strong></div><a class="dropdown-item" href="#">
+                                <svg class="icon me-2 text-success">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user-follow"></use>
+                                </svg> New user registered</a><a class="dropdown-item" href="#">
+                                <svg class="icon me-2 text-danger">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user-unfollow"></use>
+                                </svg> User deleted</a><a class="dropdown-item" href="#">
+                                <svg class="icon me-2 text-info">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-chart"></use>
+                                </svg> Sales report is ready</a><a class="dropdown-item" href="#">
+                                <svg class="icon me-2 text-success">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-basket"></use>
+                                </svg> New client</a><a class="dropdown-item" href="#">
+                                <svg class="icon me-2 text-warning">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
+                                </svg> Server overloaded</a>
+                            <div class="dropdown-header bg-light dark:bg-white dark:bg-opacity-10">
+                                <strong>Server</strong>
+                            </div><a class="dropdown-item d-block" href="#">
+                                <div class="text-uppercase mb-1"><small><b>CPU Usage</b></small></div><span
+                                    class="progress progress-thin">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 25%"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </span><small class="text-medium-emphasis">348 Processes. 1/4 Cores.</small>
+                            </a><a class="dropdown-item d-block" href="#">
+                                <div class="text-uppercase mb-1"><small><b>Memory Usage</b></small></div><span
+                                    class="progress progress-thin">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 70%"
+                                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                </span><small class="text-medium-emphasis">11444GB/16384MB</small>
+                            </a><a class="dropdown-item d-block" href="#">
+                                <div class="text-uppercase mb-1"><small><b>SSD 1 Usage</b></small></div><span
+                                    class="progress progress-thin">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%"
+                                        aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                </span><small class="text-medium-emphasis">243GB/256GB</small>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown d-md-down-none"><a class="nav-link" data-coreui-toggle="dropdown"
+                            href="#" role="button" aria-haspopup="true" aria-expanded="false"><span
+                                class="d-inline-block my-1 mx-2 position-relative">
+
+                                <svg viewBox="0 0 512 512" class="icon icon-lg">
+                                    <path fill="var(--ci-primary-color, currentColor)"
+                                        d="M136,24H16V144H136Zm-32,88H48V56h56Z" class="ci-primary" />
+                                    <path fill="var(--ci-primary-color, currentColor)"
+                                        d="M136,200H16V320H136Zm-32,88H48V232h56Z" class="ci-primary" />
+                                    <path fill="var(--ci-primary-color, currentColor)"
+                                        d="M136,376H16V496H136Zm-32,88H48V408h56Z" class="ci-primary" />
+                                    <rect width="320" height="32" x="176" y="23.998"
+                                        fill="var(--ci-primary-color, currentColor)" class="ci-primary" />
+                                    <rect width="256" height="32" x="176" y="111.998"
+                                        fill="var(--ci-primary-color, currentColor)" class="ci-primary" />
+                                    <rect width="320" height="32" x="176" y="199.998"
+                                        fill="var(--ci-primary-color, currentColor)" class="ci-primary" />
+                                    <rect width="256" height="32" x="176" y="287.998"
+                                        fill="var(--ci-primary-color, currentColor)" class="ci-primary" />
+                                    <rect width="256" height="32" x="176" y="463.998"
+                                        fill="var(--ci-primary-color, currentColor)" class="ci-primary" />
+                                    <rect width="320" height="32" x="176" y="375.998"
+                                        fill="var(--ci-primary-color, currentColor)" class="ci-primary" />
+                                </svg>
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle p-1 bg-danger rounded-circle"><span
+                                        class="visually-hidden">New alerts</span></span></span></a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-lg py-0">
+                            <div class="dropdown-header bg-light fw-semibold dark:bg-white dark:bg-opacity-10">You have
+                                5 pending
+                                tasks</div><a class="dropdown-item d-block" href="#">
+                                <div class="small mb-1">Upgrade NPM &amp; Bower<span
+                                        class="float-end"><strong>0%</strong></span></div>
+                                <span class="progress progress-thin">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 0%"
+                                        aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                </span>
+                            </a><a class="dropdown-item d-block" href="#">
+                                <div class="small mb-1">ReactJS Version<span
+                                        class="float-end"><strong>25%</strong></span></div><span
+                                    class="progress progress-thin">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 25%"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </span>
+                            </a><a class="dropdown-item d-block" href="#">
+                                <div class="small mb-1">VueJS Version<span class="float-end"><strong>50%</strong></span>
+                                </div><span class="progress progress-thin">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 50%"
+                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </span>
+                            </a><a class="dropdown-item d-block" href="#">
+                                <div class="small mb-1">Add new layouts<span
+                                        class="float-end"><strong>75%</strong></span></div><span
+                                    class="progress progress-thin">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 75%"
+                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </span>
+                            </a><a class="dropdown-item d-block" href="#">
+                                <div class="small mb-1">Angular 8 Version<span
+                                        class="float-end"><strong>100%</strong></span></div><span
+                                    class="progress progress-thin">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
+                                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </span>
+                            </a>
+                            <div class="p-2"><a class="btn btn-outline-primary w-100" href="#">View all tasks</a></div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown d-md-down-none"><a class="nav-link" data-coreui-toggle="dropdown"
+                            href="#" role="button" aria-haspopup="true" aria-expanded="false"><span
+                                class="d-inline-block my-1 mx-2 position-relative">
+
+                                <svg viewBox="0 0 512 512" class="icon icon-lg">
+                                    <path fill="var(--ci-primary-color, currentColor)"
+                                        d="M274.6,25.623a32.006,32.006,0,0,0-37.2,0L16,183.766V496H496V183.766ZM464,402.693,339.97,322.96,464,226.492ZM256,51.662,454.429,193.4,311.434,304.615,256,268.979l-55.434,35.636L57.571,193.4ZM48,226.492,172.03,322.96,48,402.693ZM464,464H48V440.735L256,307.021,464,440.735Z"
+                                        class="ci-primary" />
+                                </svg>
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle p-1 bg-danger rounded-circle"><span
+                                        class="visually-hidden">New alerts</span></span></span></a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-lg pt-0">
+                            <div class="dropdown-header bg-light dark:bg-white dark:bg-opacity-10"><strong>You have 4
+                                    messages</strong></div><a class="dropdown-item" href="#">
+                                <div class="message">
+                                    <div class="py-3 me-3 float-start">
+                                        <div class="avatar"><img class="avatar-img" src="assets/img/avatars/7.jpg"
+                                                alt="user@email.com"><span class="avatar-status bg-success"></span>
+                                        </div>
+                                    </div>
+                                    <div><small class="text-medium-emphasis">John Doe</small><small
+                                            class="text-medium-emphasis float-end mt-1">Just now</small></div>
+                                    <div class="text-truncate font-weight-bold"><span class="text-danger">!</span>
+                                        Important message</div>
+                                    <div class="small text-medium-emphasis text-truncate">Lorem ipsum dolor sit amet,
+                                        consectetur
+                                        adipisicing elit, sed do eiusmod tempor incididunt...</div>
+                                </div>
+                            </a><a class="dropdown-item" href="#">
+                                <div class="message">
+                                    <div class="py-3 me-3 float-start">
+                                        <div class="avatar"><img class="avatar-img" src="assets/img/avatars/6.jpg"
+                                                alt="user@email.com"><span class="avatar-status bg-warning"></span>
+                                        </div>
+                                    </div>
+                                    <div><small class="text-medium-emphasis">John Doe</small><small
+                                            class="text-medium-emphasis float-end mt-1">5 minutes ago</small></div>
+                                    <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+                                    <div class="small text-medium-emphasis text-truncate">Lorem ipsum dolor sit amet,
+                                        consectetur
+                                        adipisicing elit, sed do eiusmod tempor incididunt...</div>
+                                </div>
+                            </a><a class="dropdown-item" href="#">
+                                <div class="message">
+                                    <div class="py-3 me-3 float-start">
+                                        <div class="avatar"><img class="avatar-img" src="assets/img/avatars/5.jpg"
+                                                alt="user@email.com"><span class="avatar-status bg-danger"></span></div>
+                                    </div>
+                                    <div><small class="text-medium-emphasis">John Doe</small><small
+                                            class="text-medium-emphasis float-end mt-1">1:52 PM</small></div>
+                                    <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+                                    <div class="small text-medium-emphasis text-truncate">Lorem ipsum dolor sit amet,
+                                        consectetur
+                                        adipisicing elit, sed do eiusmod tempor incididunt...</div>
+                                </div>
+                            </a><a class="dropdown-item" href="#">
+                                <div class="message">
+                                    <div class="py-3 me-3 float-start">
+                                        <div class="avatar"><img class="avatar-img" src="assets/img/avatars/4.jpg"
+                                                alt="user@email.com"><span class="avatar-status bg-info"></span></div>
+                                    </div>
+                                    <div><small class="text-medium-emphasis">John Doe</small><small
+                                            class="text-medium-emphasis float-end mt-1">4:03 PM</small></div>
+                                    <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+                                    <div class="small text-medium-emphasis text-truncate">Lorem ipsum dolor sit amet,
+                                        consectetur
+                                        adipisicing elit, sed do eiusmod tempor incididunt...</div>
+                                </div>
+                            </a><a class="dropdown-item text-center border-top" href="#"><strong>View all
+                                    messages</strong></a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="header-nav ms-auto ms-sm-0 me-sm-4">
+                    <li class="nav-item dropdown d-flex align-items-center"><a class="nav-link py-0"
+                            data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                            aria-expanded="false">
+                            <div class="avatar avatar-md"><img class="avatar-img" src="assets/img/avatars/8.jpg"
+                                    alt="user@email.com"><span class="avatar-status bg-success"></span></div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end pt-0">
+                            <div class="dropdown-header bg-light py-2 dark:bg-white dark:bg-opacity-10">
+                                <div class="fw-semibold">Account</div>
+                            </div><a class="dropdown-item" href="#">
+                                <svg class="icon me-2">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
+                                </svg> Updates<span class="badge badge-sm bg-info-gradient ms-2">42</span></a><a
+                                class="dropdown-item" href="#">
+                                <svg class="icon me-2">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-envelope-open"></use>
+                                </svg> Messages<span class="badge badge-sm badge-sm bg-success ms-2">42</span></a><a
+                                class="dropdown-item" href="#">
+                                <svg class="icon me-2">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-task"></use>
+                                </svg> Tasks<span class="badge badge-sm bg-danger-gradient ms-2">42</span></a><a
+                                class="dropdown-item" href="#">
+                                <svg class="icon me-2">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-comment-square"></use>
+                                </svg> Comments<span class="badge badge-sm bg-warning-gradient ms-2">42</span></a>
+                            <div class="dropdown-header bg-light py-2 dark:bg-white dark:bg-opacity-10">
+                                <div class="fw-semibold">Settings</div>
+                            </div><a class="dropdown-item" href="#">
+                                <svg class="icon me-2">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
+                                </svg> Profile</a><a class="dropdown-item" href="#">
+                                <svg class="icon me-2">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
+                                </svg> Settings</a><a class="dropdown-item" href="#">
+                                <svg class="icon me-2">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-credit-card"></use>
+                                </svg> Payments<span
+                                    class="badge badge-sm bg-secondary-gradient text-dark ms-2">42</span></a><a
+                                class="dropdown-item" href="#">
+                                <svg class="icon me-2">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-file"></use>
+                                </svg> Projects<span class="badge badge-sm bg-primary-gradient ms-2">42</span></a>
+                            <div class="dropdown-divider"></div><a class="dropdown-item" href="#">
+                                <svg class="icon me-2">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-lock-locked"></use>
+                                </svg> Lock Account</a><a class="dropdown-item" href="#">
+                                <svg class="icon me-2">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
+                                </svg> Logout</a>
+                        </div>
+                    </li>
+                </ul>
+                <!-- <button class="header-toggler px-md-0 me-md-3" type="button"
+                    onclick="coreui.Sidebar.getInstance(document.querySelector('#aside')).show()">
+
+                    <svg viewBox="0 0 512 512" class="icon icon-lg">
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M88,160A64,64,0,1,0,24,96,64.072,64.072,0,0,0,88,160Zm0-96A32,32,0,1,1,56,96,32.036,32.036,0,0,1,88,64Z"
+                            class="ci-primary" />
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M256,32a64,64,0,1,0,64,64A64.072,64.072,0,0,0,256,32Zm0,96a32,32,0,1,1,32-32A32.036,32.036,0,0,1,256,128Z"
+                            class="ci-primary" />
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M424,160a64,64,0,1,0-64-64A64.072,64.072,0,0,0,424,160Zm0-96a32,32,0,1,1-32,32A32.036,32.036,0,0,1,424,64Z"
+                            class="ci-primary" />
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M88,192a64,64,0,1,0,64,64A64.072,64.072,0,0,0,88,192Zm0,96a32,32,0,1,1,32-32A32.036,32.036,0,0,1,88,288Z"
+                            class="ci-primary" />
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M256,192a64,64,0,1,0,64,64A64.072,64.072,0,0,0,256,192Zm0,96a32,32,0,1,1,32-32A32.036,32.036,0,0,1,256,288Z"
+                            class="ci-primary" />
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M424,192a64,64,0,1,0,64,64A64.072,64.072,0,0,0,424,192Zm0,96a32,32,0,1,1,32-32A32.036,32.036,0,0,1,424,288Z"
+                            class="ci-primary" />
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M424,352a64,64,0,1,0,64,64A64.072,64.072,0,0,0,424,352Zm0,96a32,32,0,1,1,32-32A32.036,32.036,0,0,1,424,448Z"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="56" y="408" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="152" y="408" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="248" y="408" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                    </svg>
+
+                </button> -->
+            </div>
+        </header>
+        <div class="body flex-grow-1 px-3">
+            <div class="container-lg">
+                <div class="fs-2 fw-semibold">Employee Payroll</div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item">
+                            <!-- if breadcrumb is single--><span>Salary</span>
+                        </li>
+                        <li class="breadcrumb-item active"><span>Employee Payroll</span></li>
+                    </ol>
+                </nav>
+                <!-- Container START -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card mx-1">
+                            <div class="card-body ">
+                                <div class="row justify-content-between">
+                                    <div class="col-sm-12 col-md-3">
+                                        <label class="form-label">Select Month</label>
+                                        <div data-coreui-locale="en-US" data-coreui-toggle="date-picker"></div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-3">
+                                            <label class="form-label">Client ID</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected="">Select Client ID</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                    </div>
+                                    <div class="col-sm-12 col-md-3">
+                                        <label class="form-label">Last Generated Date</label>
+                                        <input type="text" class="form-control" placeholder="Last Generated Date" disabled>
+                                    </div>
+                                    <div class="col-sm-12 col-md-3 text-end">
+                                        <br>
+                                        <button class="btn btn-primary">Add New</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4 mx-1">
+                    <div class="card">
+                        <div class="card-body ">
+                            <div class="row pb-2 ">
+                                <div class="tab-content rounded-bottom">
+                                    <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-1000">
+                                        <div id="DataTables_Table_0_wrapper"
+                                            class="dataTables_wrapper dt-bootstrap4 no-footer">
+                                            <div class="row justify-content-between mb-3">
+                                                <div class="col-sm-12 col-md-6 mb-4">
+                                                    <div class="d-flex">
+                                                        <div class="cus-label"><label>Show </label></div>
+                                                        <div class="mx-2"><select name="DataTables_Table_0_length"
+                                                                aria-controls="DataTables_Table_0"
+                                                                class="custom-select custom-select-sm form-control form-control-sm">
+                                                                <option value="10">10</option>
+                                                                <option value="25">25</option>
+                                                                <option value="50">50</option>
+                                                                <option value="100">100</option>
+                                                            </select></div>
+                                                        <div class="cus-label">
+                                                            entries
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-3">
+                                                    <div class="d-flex">
+                                                        <div class="cus-label">
+                                                            <label>Search:</label>
+                                                        </div>
+                                                        <div>
+                                                            <input type="search" class="form-control form-control-sm "
+                                                                placeholder="" aria-controls="DataTables_Table_0">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12" style="overflow: auto; ">
+                                                    <table
+                                                        class="table table-striped border datatable dataTable no-footer text-center cus-unit"
+                                                        id="DataTables_Table_0"
+                                                        aria-describedby="DataTables_Table_0_info"
+                                                        style="border-collapse: collapse !important">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="sorting">EMP ID</th>
+                                                                <th class="sorting">EMP Name</th>
+                                                                <th class="sorting">LOP Days</th>
+                                                                <th class="sorting">Paid Days</th>
+                                                                <th class="sorting">Gross Amount</th>
+                                                                <th class="sorting">Net Amount</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="align-middle odd">
+                                                                <td class=""><a href="#">DEM0133</a></td>
+                                                                <td class="">Kane Yewlenderhan</td>
+                                                                <td class="">2</td>
+                                                                <td class="">20</td>
+                                                                <td class="">25,000</td>
+                                                                <td class="">23,000</td>
+                                                            </tr>
+                                                            <tr class="align-middle odd">
+                                                                <td class=""><a href="#">DEM0133</a></td>
+                                                                <td class="">Kane Yewlenderhan</td>
+                                                                <td class="">2</td>
+                                                                <td class="">20</td>
+                                                                <td class="">25,000</td>
+                                                                <td class="">23,000</td>
+                                                            </tr>
+                                                            <tr class="align-middle odd">
+                                                                <td class=""><a href="#">DEM0133</a></td>
+                                                                <td class="">Kane Yewlenderhan</td>
+                                                                <td class="">2</td>
+                                                                <td class="">20</td>
+                                                                <td class="">25,000</td>
+                                                                <td class="">23,000</td>
+                                                            </tr>
+                                                            <tr class="align-middle odd">
+                                                                <td class=""><a href="#">DEM0133</a></td>
+                                                                <td class="">Kane Yewlenderhan</td>
+                                                                <td class="">2</td>
+                                                                <td class="">20</td>
+                                                                <td class="">25,000</td>
+                                                                <td class="">23,000</td>
+                                                            </tr>
+                                                            <tr class="align-middle odd">
+                                                                <td class=""><a href="#">DEM0133</a></td>
+                                                                <td class="">Kane Yewlenderhan</td>
+                                                                <td class="">2</td>
+                                                                <td class="">20</td>
+                                                                <td class="">25,000</td>
+                                                                <td class="">23,000</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="row justify-content-between">
+                                                <div class="col-sm-12 col-md-12 col-xl-6 my-3">
+                                                    <div class="dataTables_info" id="DataTables_Table_0_info"
+                                                        role="status" aria-live="polite">Showing 1 to 10 of 32 entries
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-12 col-xl-6">
+                                                    <div class="dataTables_paginate paging_simple_numbers cus-p-m"
+                                                        id="DataTables_Table_0_paginate">
+                                                        <ul class="pagination">
+                                                            <li class="paginate_button page-item previous disabled"
+                                                                id="DataTables_Table_0_previous"><a
+                                                                    aria-controls="DataTables_Table_0"
+                                                                    aria-disabled="true" aria-role="link"
+                                                                    data-dt-idx="previous" tabindex="0"
+                                                                    class="page-link">Previous</a></li>
+                                                            <li class="paginate_button page-item active"><a href="#"
+                                                                    aria-controls="DataTables_Table_0" aria-role="link"
+                                                                    aria-current="page" data-dt-idx="0" tabindex="0"
+                                                                    class="page-link">1</a></li>
+                                                            <li class="paginate_button page-item "><a href="#"
+                                                                    aria-controls="DataTables_Table_0" aria-role="link"
+                                                                    data-dt-idx="1" tabindex="0" class="page-link">2</a>
+                                                            </li>
+                                                            <li class="paginate_button page-item "><a href="#"
+                                                                    aria-controls="DataTables_Table_0" aria-role="link"
+                                                                    data-dt-idx="2" tabindex="0" class="page-link">3</a>
+                                                            </li>
+                                                            <li class="paginate_button page-item "><a href="#"
+                                                                    aria-controls="DataTables_Table_0" aria-role="link"
+                                                                    data-dt-idx="3" tabindex="0" class="page-link">4</a>
+                                                            </li>
+                                                            <li class="paginate_button page-item next"
+                                                                id="DataTables_Table_0_next"><a href="#"
+                                                                    aria-controls="DataTables_Table_0" aria-role="link"
+                                                                    data-dt-idx="next" tabindex="0"
+                                                                    class="page-link">Next</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- First Row Start -->
+                <div class="row ">
+
+
+                </div>
+                <!-- First Row End -->
+
+
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="ms-auto">Powered by&nbsp;<a href="#">Diyos</a></div>
+        </footer>
+    </div>
+    <!-- CoreUI and necessary plugins-->
+    <script src="vendors/@coreui/coreui-pro/js/coreui.bundle.min.js"></script>
+    <script src="vendors/simplebar/js/simplebar.min.js"></script>
+    <script>
+        if (document.body.classList.contains('dark-theme')) {
+            var element = document.getElementById('btn-dark-theme');
+            if (typeof (element) != 'undefined' && element != null) {
+                document.getElementById('btn-dark-theme').checked = true;
+            }
+        } else {
+            var element = document.getElementById('btn-light-theme');
+            if (typeof (element) != 'undefined' && element != null) {
+                document.getElementById('btn-light-theme').checked = true;
+            }
+        }
+
+        function handleThemeChange(src) {
+            var event = document.createEvent('Event');
+            event.initEvent('themeChange', true, true);
+
+            if (src.value === 'light') {
+                document.body.classList.remove('dark-theme');
+            }
+            if (src.value === 'dark') {
+                document.body.classList.add('dark-theme');
+            }
+            document.body.dispatchEvent(event);
+        }
+    </script>
+    <!-- Plugins and scripts required by this view-->
+    <script src="vendors/chart.js/js/chart.min.js"></script>
+    <script src="vendors/@coreui/chartjs/js/coreui-chartjs.js"></script>
+    <script src="vendors/@coreui/utils/js/coreui-utils.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/widgets.js"></script>
+    <script src="js/g-charts.js"></script>
+
+
+    <script>
+        var xValues = ["Suresh", "Ramesh", "Kumar", "Pavan", "Ravi"];
+        var yValues = [55, 49, 44, 24, 15];
+        var barColors = ["#5046E5", "#5046E5", "#5046E5", "#5046E5", "#5046E5"];
+
+        new Chart("myChart", {
+            type: "bar",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues,
+                    barThickness: 30,
+                    barRadius: 25
+
+                }]
+            },
+            options: {
+                legend: { display: false },
+                title: {
+                    display: true,
+
+                }
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

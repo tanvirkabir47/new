@@ -1,0 +1,2355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="./">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>TruHR</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Vendors styles-->
+    <link rel="stylesheet" href="vendors/simplebar/css/simplebar.css">
+    <link rel="stylesheet" href="css/vendors/simplebar.css">
+    <!-- Main styles for this application-->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- We use those styles to show code examples, you should remove them in your application.-->
+    <link href="css/examples.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
+    <!-- Google Charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- Charts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            // Set Data
+            const data = google.visualization.arrayToDataTable([
+                ['Contry', 'Mhl'],
+                ['Work From Home', 10],
+                ['Work From Office', 6],
+                ['Work From Field', 3]
+
+            ]);
+
+            // Set Options
+            const options = {
+                legend: 'none',
+                title: ''
+            };
+
+            // Draw
+            const chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+
+        }
+    </script>
+
+</head>
+
+
+
+<body>
+
+    <div class="sidebar sidebar-light sidebar-fixed" id="sidebar">
+        <div class="sidebar-brand d-none d-md-flex">
+            <!-- <h2 class="t-logo"> <strong>T</strong>ru<strong>HR</strong></h2> -->
+            <div class="t-logo">
+                <a href="index.html">
+                    <img src="assets/img/logo.svg" alt="TruHR Logo">
+                </a>
+            </div>
+
+            <!--button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button-->
+        </div>
+        <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
+            <li class="nav-item"><a class="nav-link" href="dashboard.html">
+                    <svg viewBox="0 0 512 512" class="nav-item cus-nav-item">
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M425.706,142.294A240,240,0,0,0,16,312v88H160V368H48V312c0-114.691,93.309-208,208-208s208,93.309,208,208v56H352v32H496V312A238.432,238.432,0,0,0,425.706,142.294Z"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="80" y="264" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="240" y="128" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="136" y="168" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="400" y="264" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M297.222,335.1l69.2-144.173-28.85-13.848L268.389,321.214A64.141,64.141,0,1,0,297.222,335.1ZM256,416a32,32,0,1,1,32-32A32.036,32.036,0,0,1,256,416Z"
+                            class="ci-primary" />
+                    </svg>
+                    Dashboard</a></li>
+            <li class="nav-title">Leaves</li>
+            <li class="nav-item mt-auto"><a class="nav-link" href="Overview.html">
+
+
+                    <svg viewBox="0 0 512 512" class="nav-item cus-nav-item">
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M40,392H240v72H160v32H352V464H272V392H472a24.028,24.028,0,0,0,24-24V72a24.028,24.028,0,0,0-24-24H40A24.028,24.028,0,0,0,16,72V368A24.028,24.028,0,0,0,40,392ZM48,80H464V360H48Z"
+                            class="ci-primary" />
+                    </svg>
+
+                    Overview</a>
+            </li>
+            <li class="nav-item mt-auto"><a class="nav-link" href="leave_applications.html">
+
+
+                    <svg viewBox="0 0 512 512" class="nav-item cus-nav-item">
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M472,96H384V40H352V96H160V40H128V96H40a24.028,24.028,0,0,0-24,24V456a24.028,24.028,0,0,0,24,24H472a24.028,24.028,0,0,0,24-24V120A24.028,24.028,0,0,0,472,96Zm-8,352H48V128h80v40h32V128H352v40h32V128h80Z"
+                            class="ci-primary" />
+                        <polygon fill="var(--ci-primary-color, currentColor)"
+                            points="243.397 313.373 189.012 258.988 166.385 281.616 243.397 358.627 369.012 233.012 346.384 210.385 243.397 313.373"
+                            class="ci-primary" />
+                    </svg>
+
+                    Leave Applications</a>
+            </li>
+            <li class="nav-item mt-auto"><a class="nav-link" href="Holidays.html">
+
+
+                    <svg viewBox="0 0 512 512" class="nav-item cus-nav-item">
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M472,96H384V40H352V96H160V40H128V96H40a24.028,24.028,0,0,0-24,24V456a24.028,24.028,0,0,0,24,24H472a24.028,24.028,0,0,0,24-24V120A24.028,24.028,0,0,0,472,96Zm-8,352H48V128h80v40h32V128H352v40h32V128h80Z"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="112" y="224" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="200" y="224" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="280" y="224" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="368" y="224" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="112" y="296" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="200" y="296" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="280" y="296" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="368" y="296" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="112" y="368" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="200" y="368" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="280" y="368" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="368" y="368" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                    </svg>
+
+                    Holidays</a>
+            </li>
+            <li class="nav-item mt-auto"><a class="nav-link" href="settings.html">
+
+
+                    <svg viewBox="0 0 512 512" class="nav-item cus-nav-item">
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M245.151,168a88,88,0,1,0,88,88A88.1,88.1,0,0,0,245.151,168Zm0,144a56,56,0,1,1,56-56A56.063,56.063,0,0,1,245.151,312Z"
+                            class="ci-primary" />
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M464.7,322.319l-31.77-26.153a193.081,193.081,0,0,0,0-80.332l31.77-26.153a19.941,19.941,0,0,0,4.606-25.439l-32.612-56.483a19.936,19.936,0,0,0-24.337-8.73l-38.561,14.447a192.038,192.038,0,0,0-69.54-40.192L297.49,32.713A19.936,19.936,0,0,0,277.762,16H212.54a19.937,19.937,0,0,0-19.728,16.712L186.05,73.284a192.03,192.03,0,0,0-69.54,40.192L77.945,99.027a19.937,19.937,0,0,0-24.334,8.731L21,164.245a19.94,19.94,0,0,0,4.61,25.438l31.767,26.151a193.081,193.081,0,0,0,0,80.332l-31.77,26.153A19.942,19.942,0,0,0,21,347.758l32.612,56.483a19.937,19.937,0,0,0,24.337,8.73l38.562-14.447a192.03,192.03,0,0,0,69.54,40.192l6.762,40.571A19.937,19.937,0,0,0,212.54,496h65.222a19.936,19.936,0,0,0,19.728-16.712l6.763-40.572a192.038,192.038,0,0,0,69.54-40.192l38.564,14.449a19.938,19.938,0,0,0,24.334-8.731L469.3,347.755A19.939,19.939,0,0,0,464.7,322.319Zm-50.636,57.12-48.109-18.024-7.285,7.334a159.955,159.955,0,0,1-72.625,41.973l-10,2.636L267.6,464h-44.89l-8.442-50.642-10-2.636a159.955,159.955,0,0,1-72.625-41.973l-7.285-7.334L76.241,379.439,53.8,340.562l39.629-32.624-2.7-9.973a160.9,160.9,0,0,1,0-83.93l2.7-9.972L53.8,171.439l22.446-38.878,48.109,18.024,7.285-7.334a159.955,159.955,0,0,1,72.625-41.973l10-2.636L222.706,48H267.6l8.442,50.642,10,2.636a159.955,159.955,0,0,1,72.625,41.973l7.285,7.334,48.109-18.024,22.447,38.877-39.629,32.625,2.7,9.972a160.9,160.9,0,0,1,0,83.93l-2.7,9.973,39.629,32.623Z"
+                            class="ci-primary" />
+                    </svg>
+
+                    Settings</a>
+            </li>
+            <li class="nav-divider"></li>
+            <li class="nav-divider"></li>
+            <li class="nav-divider"></li>
+
+
+        </ul>
+    </div>
+    <div class="sidebar sidebar-light sidebar-lg sidebar-end sidebar-overlaid hide" id="aside">
+        <div class="sidebar-header bg-transparent p-0">
+            <ul class="nav nav-underline nav-underline-primary" role="tablist">
+                <li class="nav-item"><a class="nav-link active" data-coreui-toggle="tab" href="#timeline" role="tab">
+                        <svg class="icon">
+                            <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-list"></use>
+                        </svg></a></li>
+                <li class="nav-item"><a class="nav-link" data-coreui-toggle="tab" href="#messages" role="tab">
+                        <svg class="icon">
+                            <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-speech"></use>
+                        </svg></a></li>
+                <li class="nav-item"><a class="nav-link" data-coreui-toggle="tab" href="#settings" role="tab">
+                        <svg class="icon">
+                            <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
+                        </svg></a></li>
+            </ul>
+            <button class="sidebar-close" type="button" data-coreui-close="sidebar">
+                <svg class="icon">
+                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-x"></use>
+                </svg>
+            </button>
+        </div>
+        <!-- Tab panes-->
+        <div class="tab-content">
+            <div class="tab-pane active" id="timeline" role="tabpanel">
+                <div class="list-group list-group-flush">
+                    <div
+                        class="list-group-item border-start-4 border-start-secondary bg-light text-center fw-bold text-medium-emphasis text-uppercase small dark:bg-white dark:bg-opacity-10 dark:text-medium-emphasis">
+                        Today</div>
+                    <div class="list-group-item border-start-4 border-start-warning list-group-item-divider">
+                        <div class="avatar avatar-lg float-end"><img class="avatar-img" src="assets/img/avatars/7.jpg"
+                                alt="user@email.com"></div>
+                        <div>Meeting with <strong>Lucas</strong></div><small class="text-medium-emphasis me-3">
+                            <svg class="icon">
+                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-calendar"></use>
+                            </svg> 1 - 3pm</small><small class="text-medium-emphasis">
+                            <svg class="icon">
+                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-location-pin"></use>
+                            </svg> Palo Alto, CA</small>
+                    </div>
+                    <div class="list-group-item border-start-4 border-start-info">
+                        <div class="avatar avatar-lg float-end"><img class="avatar-img" src="assets/img/avatars/4.jpg"
+                                alt="user@email.com"></div>
+                        <div>Skype with <strong>Megan</strong></div><small class="text-medium-emphasis me-3">
+                            <svg class="icon">
+                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-calendar"></use>
+                            </svg> 4 - 5pm</small><small class="text-medium-emphasis">
+                            <svg class="icon">
+                                <use xlink:href="vendors/@coreui/icons/svg/brand.svg#cib-skype"></use>
+                            </svg> On-line</small>
+                    </div>
+                    <div
+                        class="list-group-item border-start-4 border-start-secondary bg-light text-center fw-bold text-medium-emphasis text-uppercase small dark:bg-white dark:bg-opacity-10 dark:text-medium-emphasis">
+                        Tomorrow</div>
+                    <div class="list-group-item border-start-4 border-start-danger list-group-item-divider">
+                        <div>New UI Project - <strong>deadline</strong></div><small class="text-medium-emphasis me-3">
+                            <svg class="icon">
+                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-calendar"></use>
+                            </svg> 10 - 11pm</small><small class="text-medium-emphasis">
+                            <svg class="icon">
+                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-home"></use>
+                            </svg> creativeLabs HQ</small>
+                        <div class="avatars-stack mt-2">
+                            <div class="avatar avatar-xs"><img class="avatar-img" src="assets/img/avatars/2.jpg"
+                                    alt="user@email.com">
+                            </div>
+                            <div class="avatar avatar-xs"><img class="avatar-img" src="assets/img/avatars/3.jpg"
+                                    alt="user@email.com">
+                            </div>
+                            <div class="avatar avatar-xs"><img class="avatar-img" src="assets/img/avatars/4.jpg"
+                                    alt="user@email.com">
+                            </div>
+                            <div class="avatar avatar-xs"><img class="avatar-img" src="assets/img/avatars/5.jpg"
+                                    alt="user@email.com">
+                            </div>
+                            <div class="avatar avatar-xs"><img class="avatar-img" src="assets/img/avatars/6.jpg"
+                                    alt="user@email.com">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-group-item border-start-4 border-start-success list-group-item-divider">
+                        <div><strong>#10 Startups.Garden</strong> Meetup</div><small class="text-medium-emphasis me-3">
+                            <svg class="icon">
+                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-calendar"></use>
+                            </svg> 1 - 3pm</small><small class="text-medium-emphasis">
+                            <svg class="icon">
+                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-location-pin"></use>
+                            </svg> Palo Alto, CA</small>
+                    </div>
+                    <div class="list-group-item border-start-4 border-start-primary list-group-item-divider">
+                        <div><strong>Team meeting</strong></div><small class="text-medium-emphasis me-3">
+                            <svg class="icon">
+                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-calendar"></use>
+                            </svg> 4 - 6pm</small><small class="text-medium-emphasis">
+                            <svg class="icon">
+                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-home"></use>
+                            </svg> creativeLabs HQ</small>
+                        <div class="avatars-stack mt-2">
+                            <div class="avatar avatar-xs"><img class="avatar-img" src="assets/img/avatars/2.jpg"
+                                    alt="user@email.com">
+                            </div>
+                            <div class="avatar avatar-xs"><img class="avatar-img" src="assets/img/avatars/3.jpg"
+                                    alt="user@email.com">
+                            </div>
+                            <div class="avatar avatar-xs"><img class="avatar-img" src="assets/img/avatars/4.jpg"
+                                    alt="user@email.com">
+                            </div>
+                            <div class="avatar avatar-xs"><img class="avatar-img" src="assets/img/avatars/5.jpg"
+                                    alt="user@email.com">
+                            </div>
+                            <div class="avatar avatar-xs"><img class="avatar-img" src="assets/img/avatars/6.jpg"
+                                    alt="user@email.com">
+                            </div>
+                            <div class="avatar avatar-xs"><img class="avatar-img" src="assets/img/avatars/7.jpg"
+                                    alt="user@email.com">
+                            </div>
+                            <div class="avatar avatar-xs"><img class="avatar-img" src="assets/img/avatars/8.jpg"
+                                    alt="user@email.com">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane p-3" id="messages" role="tabpanel">
+                <div class="message">
+                    <div class="py-3 pb-5 me-3 float-start">
+                        <div class="avatar"><img class="avatar-img" src="assets/img/avatars/7.jpg"
+                                alt="user@email.com"><span class="avatar-status bg-success"></span></div>
+                    </div>
+                    <div><small class="text-medium-emphasis">Lukasz Holeczek</small><small
+                            class="text-medium-emphasis float-end mt-1">1:52 PM</small></div>
+                    <div class="text-truncate fw-bold">Lorem ipsum dolor sit amet</div><small
+                        class="text-medium-emphasis">Lorem
+                        ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+                </div>
+                <hr>
+                <div class="message">
+                    <div class="py-3 pb-5 me-3 float-start">
+                        <div class="avatar"><img class="avatar-img" src="assets/img/avatars/7.jpg"
+                                alt="user@email.com"><span class="avatar-status bg-success"></span></div>
+                    </div>
+                    <div><small class="text-medium-emphasis">Lukasz Holeczek</small><small
+                            class="text-medium-emphasis float-end mt-1">1:52 PM</small></div>
+                    <div class="text-truncate fw-bold">Lorem ipsum dolor sit amet</div><small
+                        class="text-medium-emphasis">Lorem
+                        ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+                </div>
+                <hr>
+                <div class="message">
+                    <div class="py-3 pb-5 me-3 float-start">
+                        <div class="avatar"><img class="avatar-img" src="assets/img/avatars/7.jpg"
+                                alt="user@email.com"><span class="avatar-status bg-success"></span></div>
+                    </div>
+                    <div><small class="text-medium-emphasis">Lukasz Holeczek</small><small
+                            class="text-medium-emphasis float-end mt-1">1:52 PM</small></div>
+                    <div class="text-truncate fw-bold">Lorem ipsum dolor sit amet</div><small
+                        class="text-medium-emphasis">Lorem
+                        ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+                </div>
+                <hr>
+                <div class="message">
+                    <div class="py-3 pb-5 me-3 float-start">
+                        <div class="avatar"><img class="avatar-img" src="assets/img/avatars/7.jpg"
+                                alt="user@email.com"><span class="avatar-status bg-success"></span></div>
+                    </div>
+                    <div><small class="text-medium-emphasis">Lukasz Holeczek</small><small
+                            class="text-medium-emphasis float-end mt-1">1:52 PM</small></div>
+                    <div class="text-truncate fw-bold">Lorem ipsum dolor sit amet</div><small
+                        class="text-medium-emphasis">Lorem
+                        ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+                </div>
+                <hr>
+                <div class="message">
+                    <div class="py-3 pb-5 me-3 float-start">
+                        <div class="avatar"><img class="avatar-img" src="assets/img/avatars/7.jpg"
+                                alt="user@email.com"><span class="avatar-status bg-success"></span></div>
+                    </div>
+                    <div><small class="text-medium-emphasis">Lukasz Holeczek</small><small
+                            class="text-medium-emphasis float-end mt-1">1:52 PM</small></div>
+                    <div class="text-truncate fw-bold">Lorem ipsum dolor sit amet</div><small
+                        class="text-medium-emphasis">Lorem
+                        ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+                </div>
+            </div>
+            <div class="tab-pane p-3" id="settings" role="tabpanel">
+                <h6>Settings</h6>
+                <div class="aside-options">
+                    <div class="clearfix mt-4">
+                        <div class="form-check form-switch form-switch-lg">
+                            <input class="form-check-input me-0" id="flexSwitchCheckDefaultLg" type="checkbox"
+                                checked="">
+                            <label class="form-check-label fw-semibold small" for="flexSwitchCheckDefaultLg">Option
+                                1</label>
+                        </div>
+                    </div>
+                    <div><small class="text-medium-emphasis">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua.</small></div>
+                </div>
+                <div class="aside-options">
+                    <div class="clearfix mt-3">
+                        <div class="form-check form-switch form-switch-lg">
+                            <input class="form-check-input me-0" id="flexSwitchCheckDefaultLg" type="checkbox">
+                            <label class="form-check-label fw-semibold small" for="flexSwitchCheckDefaultLg">Option
+                                2</label>
+                        </div>
+                    </div>
+                    <div><small class="text-medium-emphasis">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua.</small></div>
+                </div>
+                <div class="aside-options">
+                    <div class="clearfix mt-3">
+                        <div class="form-check form-switch form-switch-lg">
+                            <input class="form-check-input me-0" id="flexSwitchCheckDefaultLg" type="checkbox">
+                            <label class="form-check-label fw-semibold small" for="flexSwitchCheckDefaultLg">Option
+                                3</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="aside-options">
+                    <div class="clearfix mt-3">
+                        <div class="form-check form-switch form-switch-lg">
+                            <input class="form-check-input me-0" id="flexSwitchCheckDefaultLg" type="checkbox"
+                                checked="">
+                            <label class="form-check-label fw-semibold small" for="flexSwitchCheckDefaultLg">Option
+                                4</label>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <h6>System Utilization</h6>
+                <div class="text-uppercase mb-1 mt-4"><small><b>CPU Usage</b></small></div>
+                <div class="progress progress-thin">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                </div><small class="text-medium-emphasis">348 Processes. 1/4 Cores.</small>
+                <div class="text-uppercase mb-1 mt-2"><small><b>Memory Usage</b></small></div>
+                <div class="progress progress-thin">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                </div><small class="text-medium-emphasis">11444GB/16384MB</small>
+                <div class="text-uppercase mb-1 mt-2"><small><b>SSD 1 Usage</b></small></div>
+                <div class="progress progress-thin">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                </div><small class="text-medium-emphasis">243GB/256GB</small>
+                <div class="text-uppercase mb-1 mt-2"><small><b>SSD 2 Usage</b></small></div>
+                <div class="progress progress-thin">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 10%" aria-valuenow="10"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                </div><small class="text-medium-emphasis">25GB/256GB</small>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".header-toggler").click(function () {
+                $(".desktop_logo").toggleClass("show_logo");
+            });
+        });
+    </script>
+    <div class="wrapper d-flex flex-column min-vh-100 bg-light dark:bg-transparent">
+        <header class="header header-light t-bg header-sticky mb-4">
+            <div class="container-fluid">
+                <a class="header-brand d-md-none desktop_logo text-white" style="display:none;" href="/">
+                    <!-- <h2 class="t-logo"><strong>T</strong>tu<strong>HR</strong></h2> -->
+                    <img src="assets/img/logo.svg" alt="">
+                </a>
+                <button class="header-toggler px-md-0 me-md-3 " type="button"
+                    onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
+
+
+                    <svg viewBox="0 0 512 512" class="icon icon-lg">
+                        <rect width="352" height="32" x="80" y="96" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="352" height="32" x="80" y="240" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="352" height="32" x="80" y="384" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                    </svg>
+
+                </button>
+                <!-- Mobile Logo -->
+                <img src="assets/img/logo.svg" alt="" class="mt-logo">
+                <form class="d-none d-md-flex" role="search">
+                    <div class="input-group"><span class="input-group-text bg-light border-0 px-1" id="search-addon">
+                            <svg class="icon icon-lg my-1 mx-2 text-disabled">
+                                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-search"></use>
+                            </svg></span>
+                        <input class="form-control bg-light border-0" type="text" placeholder="Search..."
+                            aria-label="Search" aria-describedby="search-addon">
+                    </div>
+                </form>
+                <ul class="header-nav d-none d-sm-flex ms-auto me-3">
+                    <li class="nav-item dropdown d-md-down-none"><a class="nav-link" data-coreui-toggle="dropdown"
+                            href="#" role="button" aria-haspopup="true" aria-expanded="false"><span
+                                class="d-inline-block my-1 mx-2 position-relative">
+
+                                <svg viewBox="0 0 512 512" class="icon icon-lg">
+                                    <path fill="var(--ci-primary-color, currentColor)"
+                                        d="M450.27,348.569,406.6,267.945V184c0-83.813-68.187-152-152-152s-152,68.187-152,152v83.945L58.928,348.568A24,24,0,0,0,80.031,384h86.935c-.238,2.636-.367,5.3-.367,8a88,88,0,0,0,176,0c0-2.7-.129-5.364-.367-8h86.935a24,24,0,0,0,21.1-35.431ZM310.6,392a56,56,0,1,1-111.419-8H310.018A56.14,56.14,0,0,1,310.6,392ZM93.462,352,134.6,276.055V184a120,120,0,0,1,240,0v92.055L415.736,352Z"
+                                        class="ci-primary" />
+                                </svg>
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle p-1 bg-danger rounded-circle"><span
+                                        class="visually-hidden">New alerts</span></span></span></a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-lg pt-0">
+                            <div class="dropdown-header bg-light dark:bg-white dark:bg-opacity-10"><strong>You have 5
+                                    notifications</strong></div><a class="dropdown-item" href="#">
+                                <svg class="icon me-2 text-success">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user-follow"></use>
+                                </svg> New user registered</a><a class="dropdown-item" href="#">
+                                <svg class="icon me-2 text-danger">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user-unfollow"></use>
+                                </svg> User deleted</a><a class="dropdown-item" href="#">
+                                <svg class="icon me-2 text-info">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-chart"></use>
+                                </svg> Sales report is ready</a><a class="dropdown-item" href="#">
+                                <svg class="icon me-2 text-success">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-basket"></use>
+                                </svg> New client</a><a class="dropdown-item" href="#">
+                                <svg class="icon me-2 text-warning">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
+                                </svg> Server overloaded</a>
+                            <div class="dropdown-header bg-light dark:bg-white dark:bg-opacity-10">
+                                <strong>Server</strong>
+                            </div><a class="dropdown-item d-block" href="#">
+                                <div class="text-uppercase mb-1"><small><b>CPU Usage</b></small></div><span
+                                    class="progress progress-thin">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 25%"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </span><small class="text-medium-emphasis">348 Processes. 1/4 Cores.</small>
+                            </a><a class="dropdown-item d-block" href="#">
+                                <div class="text-uppercase mb-1"><small><b>Memory Usage</b></small></div><span
+                                    class="progress progress-thin">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 70%"
+                                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                </span><small class="text-medium-emphasis">11444GB/16384MB</small>
+                            </a><a class="dropdown-item d-block" href="#">
+                                <div class="text-uppercase mb-1"><small><b>SSD 1 Usage</b></small></div><span
+                                    class="progress progress-thin">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%"
+                                        aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                </span><small class="text-medium-emphasis">243GB/256GB</small>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown d-md-down-none"><a class="nav-link" data-coreui-toggle="dropdown"
+                            href="#" role="button" aria-haspopup="true" aria-expanded="false"><span
+                                class="d-inline-block my-1 mx-2 position-relative">
+
+                                <svg viewBox="0 0 512 512" class="icon icon-lg">
+                                    <path fill="var(--ci-primary-color, currentColor)"
+                                        d="M136,24H16V144H136Zm-32,88H48V56h56Z" class="ci-primary" />
+                                    <path fill="var(--ci-primary-color, currentColor)"
+                                        d="M136,200H16V320H136Zm-32,88H48V232h56Z" class="ci-primary" />
+                                    <path fill="var(--ci-primary-color, currentColor)"
+                                        d="M136,376H16V496H136Zm-32,88H48V408h56Z" class="ci-primary" />
+                                    <rect width="320" height="32" x="176" y="23.998"
+                                        fill="var(--ci-primary-color, currentColor)" class="ci-primary" />
+                                    <rect width="256" height="32" x="176" y="111.998"
+                                        fill="var(--ci-primary-color, currentColor)" class="ci-primary" />
+                                    <rect width="320" height="32" x="176" y="199.998"
+                                        fill="var(--ci-primary-color, currentColor)" class="ci-primary" />
+                                    <rect width="256" height="32" x="176" y="287.998"
+                                        fill="var(--ci-primary-color, currentColor)" class="ci-primary" />
+                                    <rect width="256" height="32" x="176" y="463.998"
+                                        fill="var(--ci-primary-color, currentColor)" class="ci-primary" />
+                                    <rect width="320" height="32" x="176" y="375.998"
+                                        fill="var(--ci-primary-color, currentColor)" class="ci-primary" />
+                                </svg>
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle p-1 bg-danger rounded-circle"><span
+                                        class="visually-hidden">New alerts</span></span></span></a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-lg py-0">
+                            <div class="dropdown-header bg-light fw-semibold dark:bg-white dark:bg-opacity-10">You have
+                                5 pending
+                                tasks</div><a class="dropdown-item d-block" href="#">
+                                <div class="small mb-1">Upgrade NPM &amp; Bower<span
+                                        class="float-end"><strong>0%</strong></span></div>
+                                <span class="progress progress-thin">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 0%"
+                                        aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                </span>
+                            </a><a class="dropdown-item d-block" href="#">
+                                <div class="small mb-1">ReactJS Version<span
+                                        class="float-end"><strong>25%</strong></span></div><span
+                                    class="progress progress-thin">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 25%"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </span>
+                            </a><a class="dropdown-item d-block" href="#">
+                                <div class="small mb-1">VueJS Version<span class="float-end"><strong>50%</strong></span>
+                                </div><span class="progress progress-thin">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 50%"
+                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </span>
+                            </a><a class="dropdown-item d-block" href="#">
+                                <div class="small mb-1">Add new layouts<span
+                                        class="float-end"><strong>75%</strong></span></div><span
+                                    class="progress progress-thin">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 75%"
+                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </span>
+                            </a><a class="dropdown-item d-block" href="#">
+                                <div class="small mb-1">Angular 8 Version<span
+                                        class="float-end"><strong>100%</strong></span></div><span
+                                    class="progress progress-thin">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
+                                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </span>
+                            </a>
+                            <div class="p-2"><a class="btn btn-outline-primary w-100" href="#">View all tasks</a></div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown d-md-down-none"><a class="nav-link" data-coreui-toggle="dropdown"
+                            href="#" role="button" aria-haspopup="true" aria-expanded="false"><span
+                                class="d-inline-block my-1 mx-2 position-relative">
+
+                                <svg viewBox="0 0 512 512" class="icon icon-lg">
+                                    <path fill="var(--ci-primary-color, currentColor)"
+                                        d="M274.6,25.623a32.006,32.006,0,0,0-37.2,0L16,183.766V496H496V183.766ZM464,402.693,339.97,322.96,464,226.492ZM256,51.662,454.429,193.4,311.434,304.615,256,268.979l-55.434,35.636L57.571,193.4ZM48,226.492,172.03,322.96,48,402.693ZM464,464H48V440.735L256,307.021,464,440.735Z"
+                                        class="ci-primary" />
+                                </svg>
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle p-1 bg-danger rounded-circle"><span
+                                        class="visually-hidden">New alerts</span></span></span></a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-lg pt-0">
+                            <div class="dropdown-header bg-light dark:bg-white dark:bg-opacity-10"><strong>You have 4
+                                    messages</strong></div><a class="dropdown-item" href="#">
+                                <div class="message">
+                                    <div class="py-3 me-3 float-start">
+                                        <div class="avatar"><img class="avatar-img" src="assets/img/avatars/7.jpg"
+                                                alt="user@email.com"><span class="avatar-status bg-success"></span>
+                                        </div>
+                                    </div>
+                                    <div><small class="text-medium-emphasis">John Doe</small><small
+                                            class="text-medium-emphasis float-end mt-1">Just now</small></div>
+                                    <div class="text-truncate font-weight-bold"><span class="text-danger">!</span>
+                                        Important message</div>
+                                    <div class="small text-medium-emphasis text-truncate">Lorem ipsum dolor sit amet,
+                                        consectetur
+                                        adipisicing elit, sed do eiusmod tempor incididunt...</div>
+                                </div>
+                            </a><a class="dropdown-item" href="#">
+                                <div class="message">
+                                    <div class="py-3 me-3 float-start">
+                                        <div class="avatar"><img class="avatar-img" src="assets/img/avatars/6.jpg"
+                                                alt="user@email.com"><span class="avatar-status bg-warning"></span>
+                                        </div>
+                                    </div>
+                                    <div><small class="text-medium-emphasis">John Doe</small><small
+                                            class="text-medium-emphasis float-end mt-1">5 minutes ago</small></div>
+                                    <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+                                    <div class="small text-medium-emphasis text-truncate">Lorem ipsum dolor sit amet,
+                                        consectetur
+                                        adipisicing elit, sed do eiusmod tempor incididunt...</div>
+                                </div>
+                            </a><a class="dropdown-item" href="#">
+                                <div class="message">
+                                    <div class="py-3 me-3 float-start">
+                                        <div class="avatar"><img class="avatar-img" src="assets/img/avatars/5.jpg"
+                                                alt="user@email.com"><span class="avatar-status bg-danger"></span></div>
+                                    </div>
+                                    <div><small class="text-medium-emphasis">John Doe</small><small
+                                            class="text-medium-emphasis float-end mt-1">1:52 PM</small></div>
+                                    <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+                                    <div class="small text-medium-emphasis text-truncate">Lorem ipsum dolor sit amet,
+                                        consectetur
+                                        adipisicing elit, sed do eiusmod tempor incididunt...</div>
+                                </div>
+                            </a><a class="dropdown-item" href="#">
+                                <div class="message">
+                                    <div class="py-3 me-3 float-start">
+                                        <div class="avatar"><img class="avatar-img" src="assets/img/avatars/4.jpg"
+                                                alt="user@email.com"><span class="avatar-status bg-info"></span></div>
+                                    </div>
+                                    <div><small class="text-medium-emphasis">John Doe</small><small
+                                            class="text-medium-emphasis float-end mt-1">4:03 PM</small></div>
+                                    <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+                                    <div class="small text-medium-emphasis text-truncate">Lorem ipsum dolor sit amet,
+                                        consectetur
+                                        adipisicing elit, sed do eiusmod tempor incididunt...</div>
+                                </div>
+                            </a><a class="dropdown-item text-center border-top" href="#"><strong>View all
+                                    messages</strong></a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="header-nav ms-auto ms-sm-0 me-sm-4">
+                    <li class="nav-item dropdown d-flex align-items-center"><a class="nav-link py-0"
+                            data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                            aria-expanded="false">
+                            <div class="avatar avatar-md"><img class="avatar-img" src="assets/img/avatars/8.jpg"
+                                    alt="user@email.com"><span class="avatar-status bg-success"></span></div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end pt-0">
+                            <div class="dropdown-header bg-light py-2 dark:bg-white dark:bg-opacity-10">
+                                <div class="fw-semibold">Account</div>
+                            </div><a class="dropdown-item" href="#">
+                                <svg class="icon me-2">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
+                                </svg> Updates<span class="badge badge-sm bg-info-gradient ms-2">42</span></a><a
+                                class="dropdown-item" href="#">
+                                <svg class="icon me-2">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-envelope-open"></use>
+                                </svg> Messages<span class="badge badge-sm badge-sm bg-success ms-2">42</span></a><a
+                                class="dropdown-item" href="#">
+                                <svg class="icon me-2">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-task"></use>
+                                </svg> Tasks<span class="badge badge-sm bg-danger-gradient ms-2">42</span></a><a
+                                class="dropdown-item" href="#">
+                                <svg class="icon me-2">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-comment-square"></use>
+                                </svg> Comments<span class="badge badge-sm bg-warning-gradient ms-2">42</span></a>
+                            <div class="dropdown-header bg-light py-2 dark:bg-white dark:bg-opacity-10">
+                                <div class="fw-semibold">Settings</div>
+                            </div><a class="dropdown-item" href="#">
+                                <svg class="icon me-2">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
+                                </svg> Profile</a><a class="dropdown-item" href="#">
+                                <svg class="icon me-2">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
+                                </svg> Settings</a><a class="dropdown-item" href="#">
+                                <svg class="icon me-2">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-credit-card"></use>
+                                </svg> Payments<span
+                                    class="badge badge-sm bg-secondary-gradient text-dark ms-2">42</span></a><a
+                                class="dropdown-item" href="#">
+                                <svg class="icon me-2">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-file"></use>
+                                </svg> Projects<span class="badge badge-sm bg-primary-gradient ms-2">42</span></a>
+                            <div class="dropdown-divider"></div><a class="dropdown-item" href="#">
+                                <svg class="icon me-2">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-lock-locked"></use>
+                                </svg> Lock Account</a><a class="dropdown-item" href="#">
+                                <svg class="icon me-2">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
+                                </svg> Logout</a>
+                        </div>
+                    </li>
+                </ul>
+                <!-- <button class="header-toggler px-md-0 me-md-3" type="button"
+                    onclick="coreui.Sidebar.getInstance(document.querySelector('#aside')).show()">
+
+                    <svg viewBox="0 0 512 512" class="icon icon-lg">
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M88,160A64,64,0,1,0,24,96,64.072,64.072,0,0,0,88,160Zm0-96A32,32,0,1,1,56,96,32.036,32.036,0,0,1,88,64Z"
+                            class="ci-primary" />
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M256,32a64,64,0,1,0,64,64A64.072,64.072,0,0,0,256,32Zm0,96a32,32,0,1,1,32-32A32.036,32.036,0,0,1,256,128Z"
+                            class="ci-primary" />
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M424,160a64,64,0,1,0-64-64A64.072,64.072,0,0,0,424,160Zm0-96a32,32,0,1,1-32,32A32.036,32.036,0,0,1,424,64Z"
+                            class="ci-primary" />
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M88,192a64,64,0,1,0,64,64A64.072,64.072,0,0,0,88,192Zm0,96a32,32,0,1,1,32-32A32.036,32.036,0,0,1,88,288Z"
+                            class="ci-primary" />
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M256,192a64,64,0,1,0,64,64A64.072,64.072,0,0,0,256,192Zm0,96a32,32,0,1,1,32-32A32.036,32.036,0,0,1,256,288Z"
+                            class="ci-primary" />
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M424,192a64,64,0,1,0,64,64A64.072,64.072,0,0,0,424,192Zm0,96a32,32,0,1,1,32-32A32.036,32.036,0,0,1,424,288Z"
+                            class="ci-primary" />
+                        <path fill="var(--ci-primary-color, currentColor)"
+                            d="M424,352a64,64,0,1,0,64,64A64.072,64.072,0,0,0,424,352Zm0,96a32,32,0,1,1,32-32A32.036,32.036,0,0,1,424,448Z"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="56" y="408" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="152" y="408" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                        <rect width="32" height="32" x="248" y="408" fill="var(--ci-primary-color, currentColor)"
+                            class="ci-primary" />
+                    </svg>
+
+                </button> -->
+            </div>
+        </header>
+        <div class="body flex-grow-1 px-3">
+            <div class="container-lg">
+                <div class="fs-2 fw-semibold">Add Employee</div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item">
+                            <!-- if breadcrumb is single--><span>Home</span>
+                        </li>
+                        <li class="breadcrumb-item active"><span>Add Employee</span></li>
+                    </ol>
+                </nav>
+                <!-- Container START -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card mx-1">
+                            <div class="card-body ">
+                                <div class="row justify-content-end">
+                                    <div class="col-6 text-end">
+                                        <button class="btn btn-primary">View All</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4 mx-1">
+                    <div class="card">
+                        <div class="card-body ">
+                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                        data-bs-target="#Personal-info" type="button" role="tab" aria-controls="pills-home"
+                                        aria-selected="true">Personal Info</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                        data-bs-target="#educationBankInfo" type="button" role="tab"
+                                        aria-controls="pills-profile" aria-selected="false">Education / Bank Info</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                        data-bs-target="#vaccination" type="button" role="tab"
+                                        aria-controls="pills-contact" aria-selected="false">Vaccination</button>
+                                </li>
+                                <li class="nav-item" role="address">
+                                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                        data-bs-target="#address" type="button" role="tab"
+                                        aria-controls="pills-contact" aria-selected="false">Address</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-contact-tab-2" data-bs-toggle="pill"
+                                        data-bs-target="#documents" type="button" role="tab"
+                                        aria-controls="pills-contact" aria-selected="false">Documents</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-contact-tab-2" data-bs-toggle="pill"
+                                        data-bs-target="#pfEsiInsuranceInfo" type="button" role="tab"
+                                        aria-controls="pills-contact" aria-selected="false">PF / ESI / Insurance Info</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-contact-tab-2" data-bs-toggle="pill"
+                                        data-bs-target="#familyMembers" type="button" role="tab"
+                                        aria-controls="pills-contact" aria-selected="false">Family Members</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="pills-tabContent">
+                                <!-- Personal Info Tab Body Start -->
+                                <div class="tab-pane fade show active" id="Personal-info" role="tabpanel"
+                                    aria-labelledby="pills-home-tab">
+                                    <div class="row">
+                                        <hr>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4">
+                                                <label class="col-sm-4 col-form-label">Name <span
+                                                        class="text-danger">*</span></label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Name">
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Email Address <span
+                                                        class="text-danger">*</span></label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="email"
+                                                        placeholder="Enter Email Addeess">
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Contact Number <span
+                                                        class="text-danger">*</span></label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text"
+                                                        placeholder="Enter Contact Number">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Address <span
+                                                        class="text-danger">*</span></label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Address">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Designation <span
+                                                        class="text-danger">*</span></label>
+                                                <div class="col-sm-8">
+                                                    <select class="col-sm-5 form-select"
+                                                        aria-label="Default select example">
+                                                        <option selected="">Select Designation</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Gender <span
+                                                        class="text-danger">*</span></label>
+                                                <div class="col-sm-8">
+                                                    <div class="d-flex">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="exampleRadios" id="exampleRadios1" value="option1"
+                                                                checked>
+                                                            <label class="form-check-label" for="exampleRadios1">
+                                                                Male
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check cus-ml">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="exampleRadios" id="exampleRadios2"
+                                                                value="option2">
+                                                            <label class="form-check-label" for="exampleRadios2">
+                                                                Female
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Date Of Birth <span
+                                                        class="text-danger">*</span></label>
+                                                <div class="col-sm-8">
+                                                    <div data-coreui-locale="en-US" data-coreui-toggle="date-picker">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Client<span
+                                                        class="text-danger">*</span></label>
+                                                <div class="col-sm-8">
+                                                    <select class="col-sm-5 form-select"
+                                                        aria-label="Default select example">
+                                                        <option selected="">Select Client</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Client Available Shift <span
+                                                        class="text-danger">*</span></label>
+                                                <div class="col-sm-8">
+                                                    <select class="col-sm-5 form-select"
+                                                        aria-label="Default select example">
+                                                        <option selected="">Select Client Available Shift</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Incharge<span
+                                                        class="text-danger">*</span></label>
+                                                <div class="col-sm-8">
+                                                    <select class="col-sm-5 form-select"
+                                                        aria-label="Default select example">
+                                                        <option selected="">Select Incharge</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Client Category<span
+                                                        class="text-danger">*</span></label>
+                                                <div class="col-sm-8">
+                                                    <select class="col-sm-5 form-select"
+                                                        aria-label="Default select example">
+                                                        <option selected="">Select Client Category</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Employee Category <span
+                                                        class="text-danger">*</span></label>
+                                                <div class="col-sm-8">
+                                                    <select class="col-sm-5 form-select"
+                                                        aria-label="Default select example">
+                                                        <option selected="">Select Employee Category</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Marital Status</label>
+                                                <div class="col-sm-8">
+                                                    <select class="col-sm-5 form-select"
+                                                        aria-label="Default select example">
+                                                        <option selected="">Select Marital Status</option>
+                                                        <option value="1">Un Married</option>
+                                                        <option value="2">Married</option>
+                                                        <option value="3">Divorcee</option>
+                                                        <option value="4">Widow</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Mother Tongue <span
+                                                        class="text-danger">*</span></label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Mother Tongue">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">UAN Number <span
+                                                        class="text-danger">*</span></label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter UAN Number">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Unit ID <span
+                                                        class="text-danger">*</span></label>
+                                                <div class="col-sm-8">
+                                                    <select class="col-sm-5 form-select"
+                                                        aria-label="Default select example">
+                                                        <option selected="">Select Unit ID</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Site Posted To</label>
+                                                <div class="col-sm-8">
+                                                    <select class="col-sm-5 form-select"
+                                                        aria-label="Default select example">
+                                                        <option selected="">Select Site Posted To</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">BLood Group</label>
+                                                <div class="col-sm-8">
+                                                    <select class="col-sm-5 form-select"
+                                                        aria-label="Default select example">
+                                                        <option selected="">Select BLood Group</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Date Of Joining </label>
+                                                <div class="col-sm-8">
+                                                    <div data-coreui-locale="en-US" data-coreui-toggle="date-picker">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Reporting Manager</label>
+                                                <div class="col-sm-8">
+                                                    <select class="col-sm-5 form-select"
+                                                        aria-label="Default select example">
+                                                        <option selected="">Select Reporting Manager</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Branch</label>
+                                                <div class="col-sm-8">
+                                                    <select class="col-sm-5 form-select"
+                                                        aria-label="Default select example">
+                                                        <option selected="">Select Branch</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Employee Type</label>
+                                                <div class="col-sm-8">
+                                                    <div class="d-flex">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="exampleRadios" id="exampleRadios1" value="option1"
+                                                                checked>
+                                                            <label class="form-check-label" for="exampleRadios1">
+                                                                General
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check cus-ml">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="exampleRadios" id="exampleRadios2"
+                                                                value="option2">
+                                                            <label class="form-check-label" for="exampleRadios2">
+                                                                Staff
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Father Name</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Father Name">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Father Occupation</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Father Occupation">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Mother Name</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Mother Name">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Departments</label>
+                                                <div class="col-sm-8">
+                                                    <select class="col-sm-5 form-select"
+                                                        aria-label="Default select example">
+                                                        <option selected="">Select Departments</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Remarks</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Remarks">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Date Of Leaving </label>
+                                                <div class="col-sm-8">
+                                                    <div data-coreui-locale="en-US" data-coreui-toggle="date-picker">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Date Of Interview </label>
+                                                <div class="col-sm-8">
+                                                    <div data-coreui-locale="en-US" data-coreui-toggle="date-picker">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Languages Known</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Languages Known">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Nationality</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Nationality">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Religion</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Religion">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">ID Card Issued On</label>
+                                                <div class="col-sm-8">
+                                                    <div data-coreui-locale="en-US" data-coreui-toggle="date-picker">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">ID Card Valid Till</label>
+                                                <div class="col-sm-8">
+                                                    <div data-coreui-locale="en-US" data-coreui-toggle="date-picker">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Old Employee ID</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Old Employee ID">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Height</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Height">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Weight</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Weight">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Physical Remarks</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Physical Remarks">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Identification Mark-1</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Identification Mark-1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Identification Mark-2</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Identification Mark-2">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Emp Chest Unex</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Chest Unex">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Emp Chest Exp</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Chest Exp">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Title</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Title">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12 col-md-12">
+                                            <h6>EX Service Details</h6>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Ex Service</label>
+                                                <div class="col-sm-8">
+                                                    <div class="d-flex">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="exampleRadios" id="exampleRadios1" value="option1"
+                                                                checked>
+                                                            <label class="form-check-label" for="exampleRadios1">
+                                                                Yes
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check cus-ml">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="exampleRadios" id="exampleRadios2"
+                                                                value="option2">
+                                                            <label class="form-check-label" for="exampleRadios2">
+                                                                No
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Service No</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Service No">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Service No</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Service No">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Date Of Enrolment</label>
+                                                <div class="col-sm-8">
+                                                    <div data-coreui-locale="en-US" data-coreui-toggle="date-picker">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Rank</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Rank">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Corps</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Corps">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Trade</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Trade">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Date Of Discharge</label>
+                                                <div class="col-sm-8">
+                                                    <div data-coreui-locale="en-US" data-coreui-toggle="date-picker">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">BLood Group</label>
+                                                <div class="col-sm-8">
+                                                    <select class="col-sm-5 form-select"
+                                                        aria-label="Default select example">
+                                                        <option selected="">Select BLood Group</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Reasons Of Discharge</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Reasons Of Discharge">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Conduct</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Conduct">
+                                                </div>
+                                            </div>
+                                        </div>            
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label"> </span></label>
+                                                <div class="col-sm-8">
+                                                    <button class="btn btn-primary">Submit</button>
+                                                    <a href="#" class="cus-link cus-ml">Clear the fields</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Personal Info Tab Body End -->
+                                <!-- Education Bank Info Start -->
+                                <div class="tab-pane fade" id="educationBankInfo" role="tabpanel"
+                                    aria-labelledby="educationBankInfo">
+                                    <div class="row mt-3">
+                                        <hr>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Qualification</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Qualification">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Name Of The School / Collage</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Name Of The School / Collage">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Board / University</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Board / University">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Year Of study</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Year Of study">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Pass / Fail</label>
+                                                <div class="col-sm-8">
+                                                    <div class="d-flex">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="exampleRadios" id="exampleRadios1" value="option1"
+                                                                checked>
+                                                            <label class="form-check-label" for="exampleRadios1">
+                                                                Pass
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check cus-ml">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="exampleRadios" id="exampleRadios2"
+                                                                value="option2">
+                                                            <label class="form-check-label" for="exampleRadios2">
+                                                                Fail
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Percentage</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Percentage">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12 col-md-12">
+                                            <h6>Bank Details</h6>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Bank Name <span class="text-danger">*</span></label>
+                                                <div class="col-sm-8">
+                                                    <select class="col-sm-5 form-select"
+                                                        aria-label="Default select example">
+                                                        <option selected="">Select Bank</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Bank Code</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Bank Code">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Account Number <span class="text-danger">*</span></label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Account Number">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Bank IFSC Code <span class="text-danger">*</span></label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Bank IFSC Code">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Bank Branch Name</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Branch Name">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Branch Code</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Branch Code">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Region Code</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Region Code">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Application Number</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Application Number">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Reference Bank Card</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Reference Bank Card">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12 col-md-12"></div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label"></label>
+                                                <div class="col-sm-8">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label"></label>
+                                                <div class="col-sm-8">
+                                                   <button class="btn btn-primary">Submit</button>
+                                                   <a href="#" class="cus-link cus-ml">Clear the fields</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <!-- Education Bank Info End -->
+                                <!-- Vaccination Section Start -->
+                                <div class="tab-pane fade" id="vaccination" role="tabpanel"
+                                    aria-labelledby="pills-contact-tab">
+                                    <div class="row mt-3">
+                                        <hr>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Vaccine Taken</label>
+                                                <div class="col-sm-8">
+                                                    <select class="col-sm-5 form-select"
+                                                        aria-label="Default select example">
+                                                        <option selected="">Select Bank</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Vaccine Date <span
+                                                        class="text-danger">*</span></label>
+                                                <div class="col-sm-8">
+                                                    <div data-coreui-locale="en-US" data-coreui-toggle="date-picker">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Dose Taken</label>
+                                                <div class="col-sm-8">
+                                                    <div class="d-flex">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="exampleRadios" id="exampleRadios1" value="option1"
+                                                                checked>
+                                                            <label class="form-check-label" for="exampleRadios1">
+                                                                1st
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check cus-ml">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="exampleRadios" id="exampleRadios2"
+                                                                value="option2">
+                                                            <label class="form-check-label" for="exampleRadios2">
+                                                                2nd
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12 col-md-12"></div>
+                                        <div class="col-xl-12 col-md-12"></div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label"></label>
+                                                <div class="col-sm-8">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label"></label>
+                                                <div class="col-sm-8">
+                                                   <button class="btn btn-primary">Submit</button>
+                                                   <a href="#" class="cus-link cus-ml">Clear the fields</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Vaccination Section End -->
+                                <!-- Address Section Start -->
+                                <div class="tab-pane fade" id="address" role="address"
+                                    aria-labelledby="address">
+                                    <div class="row mt-3">
+                                        <hr>
+                                        <h6>Present Address</h6>
+                                        
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Address</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Address">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Land Mark</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Land Mark">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Town</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Town">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Police Station</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Police Station">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">State</label>
+                                                <div class="col-sm-8">
+                                                    <select class="col-sm-5 form-select"
+                                                        aria-label="Default select example">
+                                                        <option selected="">Select State</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">City</label>
+                                                <div class="col-sm-8">
+                                                    <select class="col-sm-5 form-select"
+                                                        aria-label="Default select example">
+                                                        <option selected="">Select City</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Pincode</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Pincode">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12 col-md-12">
+                                            <h6>Present Address</h6>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label"></label>
+                                                <div class="col-sm-8">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="formCheckDefault">
+                                                        <label class="form-check-label" for="formCheckDefault">Same as Present Address</label>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Address</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Address">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Land Mark</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Land Mark">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Town</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Town">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Police Station</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Police Station">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">State</label>
+                                                <div class="col-sm-8">
+                                                    <select class="col-sm-5 form-select"
+                                                        aria-label="Default select example">
+                                                        <option selected="">Select State</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">City</label>
+                                                <div class="col-sm-8">
+                                                    <select class="col-sm-5 form-select"
+                                                        aria-label="Default select example">
+                                                        <option selected="">Select City</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Pincode</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Pincode">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label"></label>
+                                                <div class="col-sm-8">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label"></label>
+                                                <div class="col-sm-8">
+                                                   <button class="btn btn-primary">Submit</button>
+                                                   <a href="#" class="cus-link cus-ml">Clear the fields</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Address Section End -->
+                                <!-- Documents Section Start -->
+                                <div class="tab-pane fade" id="documents" role="documents"
+                                    aria-labelledby="documents">
+                                    <div class="row mt-3">
+                                        <hr>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Aadhaar Card </label>
+                                                <div class="col-sm-8">
+                                                    <div class="d-flex">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="exampleRadios" id="exampleRadios1" value="option1"
+                                                                checked>
+                                                            <label class="form-check-label" for="exampleRadios1">
+                                                                Yes
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check cus-ml">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="exampleRadios" id="exampleRadios2"
+                                                                value="option2">
+                                                            <label class="form-check-label" for="exampleRadios2">
+                                                                No
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Aadhaar Card No</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Aadhaar Card No">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Driving License </label>
+                                                <div class="col-sm-8">
+                                                    <div class="d-flex">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="exampleRadios" id="exampleRadios1" value="option1"
+                                                                checked>
+                                                            <label class="form-check-label" for="exampleRadios1">
+                                                                Yes
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check cus-ml">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="exampleRadios" id="exampleRadios2"
+                                                                value="option2">
+                                                            <label class="form-check-label" for="exampleRadios2">
+                                                                No
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Driving License  No</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Driving License No">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Voter ID </label>
+                                                <div class="col-sm-8">
+                                                    <div class="d-flex">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="exampleRadios" id="exampleRadios1" value="option1"
+                                                                checked>
+                                                            <label class="form-check-label" for="exampleRadios1">
+                                                                Yes
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check cus-ml">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="exampleRadios" id="exampleRadios2"
+                                                                value="option2">
+                                                            <label class="form-check-label" for="exampleRadios2">
+                                                                No
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Voter ID No</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Voter ID No">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Pancard </label>
+                                                <div class="col-sm-8">
+                                                    <div class="d-flex">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="exampleRadios" id="exampleRadios1" value="option1"
+                                                                checked>
+                                                            <label class="form-check-label" for="exampleRadios1">
+                                                                Yes
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check cus-ml">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="exampleRadios" id="exampleRadios2"
+                                                                value="option2">
+                                                            <label class="form-check-label" for="exampleRadios2">
+                                                                No
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Pancard No</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Pancard No">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label"></label>
+                                                <div class="col-sm-8">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label"></label>
+                                                <div class="col-sm-8">
+                                                   <button class="btn btn-primary">Submit</button>
+                                                   <a href="#" class="cus-link cus-ml">Clear the fields</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Documets Section End -->
+                                <!-- PF / ESI / Insurance Info Section Start -->
+                                <div class="tab-pane fade" id="pfEsiInsuranceInfo" role="pfEsiInsuranceInfo"
+                                    aria-labelledby="pfEsiInsuranceInfo">
+                                    <div class="row mt-3">
+                                        <hr>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">PF Deduct</label>
+                                                <div class="col-sm-8">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                                      </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">ESI Deduct</label>
+                                                <div class="col-sm-8">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                                      </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">PT Deduct </label>
+                                                <div class="col-sm-8">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                                      </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12 col-md-12"><h6>Insurance Details</h6></div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Nominee Name</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Nominee Name">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Nominee Date Of Birth <span
+                                                        class="text-danger">*</span></label>
+                                                <div class="col-sm-8">
+                                                    <div data-coreui-locale="en-US" data-coreui-toggle="date-picker">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Nominee Relation</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Nominee Relation">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Coverage Amount</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Coverage Amount">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Deduction Amount</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Deduction Amount">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label"></label>
+                                                <div class="col-sm-8">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label"></label>
+                                                <div class="col-sm-8">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label"></label>
+                                                <div class="col-sm-8">
+                                                   <button class="btn btn-primary">Submit</button>
+                                                   <a href="#" class="cus-link cus-ml">Clear the fields</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PF / ESI / Insurance Info Section End --> 
+                                <!-- Family Members Section Start -->
+                                <div class="tab-pane fade" id="familyMembers" role="familyMembers"
+                                    aria-labelledby="familyMembers">
+                                    <div class="row mt-3">
+                                        <hr>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Name</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Name">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Relation Type</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Relation Type">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Age</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Age">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Date Of Birth <span
+                                                        class="text-danger">*</span></label>
+                                                <div class="col-sm-8">
+                                                    <div data-coreui-locale="en-US" data-coreui-toggle="date-picker">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Phone No</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Phone No">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Reference Phone Number-1</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Reference Phone Number-1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Reference Phone Number-2</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Reference Phone Number-2">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Reference Address-1</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Reference Address-1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">Reference Address-2</label>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" type="text" placeholder="Enter Reference Address-2">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">PF Nominee</label>
+                                                <div class="col-sm-8">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                                      </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label">ESI Nominee</label>
+                                                <div class="col-sm-8">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                                      </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label"></label>
+                                                <div class="col-sm-8">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label"></label>
+                                                <div class="col-sm-8">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-md-12">
+                                            <div class="form-group row mb-4 justify-content-between">
+                                                <label class="col-sm-4 col-form-label"></label>
+                                                <div class="col-sm-8">
+                                                   <button class="btn btn-primary">Submit</button>
+                                                   <a href="#" class="cus-link cus-ml">Clear the fields</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Family Members Section End -->        
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- First Row Start -->
+                    <div class="row ">
+
+
+                    </div>
+                    <!-- First Row End -->
+
+
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="ms-auto">Powered by&nbsp;<a href="#">Diyos</a></div>
+            </footer>
+        </div>
+        <!-- CoreUI and necessary plugins-->
+        <script src="vendors/@coreui/coreui-pro/js/coreui.bundle.min.js"></script>
+        <script src="vendors/simplebar/js/simplebar.min.js"></script>
+        <script>
+            if (document.body.classList.contains('dark-theme')) {
+                var element = document.getElementById('btn-dark-theme');
+                if (typeof (element) != 'undefined' && element != null) {
+                    document.getElementById('btn-dark-theme').checked = true;
+                }
+            } else {
+                var element = document.getElementById('btn-light-theme');
+                if (typeof (element) != 'undefined' && element != null) {
+                    document.getElementById('btn-light-theme').checked = true;
+                }
+            }
+
+            function handleThemeChange(src) {
+                var event = document.createEvent('Event');
+                event.initEvent('themeChange', true, true);
+
+                if (src.value === 'light') {
+                    document.body.classList.remove('dark-theme');
+                }
+                if (src.value === 'dark') {
+                    document.body.classList.add('dark-theme');
+                }
+                document.body.dispatchEvent(event);
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <!-- Plugins and scripts required by this view-->
+        <script src="vendors/chart.js/js/chart.min.js"></script>
+        <script src="vendors/@coreui/chartjs/js/coreui-chartjs.js"></script>
+        <script src="vendors/@coreui/utils/js/coreui-utils.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/widgets.js"></script>
+        <script src="js/g-charts.js"></script>
+
+
+        <script>
+            var xValues = ["Suresh", "Ramesh", "Kumar", "Pavan", "Ravi"];
+            var yValues = [55, 49, 44, 24, 15];
+            var barColors = ["#5046E5", "#5046E5", "#5046E5", "#5046E5", "#5046E5"];
+
+            new Chart("myChart", {
+                type: "bar",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues,
+                        barThickness: 30,
+                        barRadius: 25
+
+                    }]
+                },
+                options: {
+                    legend: { display: false },
+                    title: {
+                        display: true,
+
+                    }
+                }
+            });
+
+        </script>
+
+</body>
+
+</html>
